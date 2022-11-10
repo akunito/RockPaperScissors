@@ -118,13 +118,43 @@ function updateScore(roundNum) {
     divScore.innerText = `Computer ${computerScore} - ${humanScore} Human`;
 }
 
+function askPlayAgain() {
+    let answer = prompt("Do you want to play again? (Y/N)");
+    answer = answer.toLowerCase();
+    if (answer == 'y'){
+        humanScore = 0;
+        computerScore = 0;
+        divScore.innerText = `Computer ${computerScore} - ${humanScore} Human`;
+        return 1;
+    } if (answer == 'no' && answer == 'not' && answer == 'n') {
+        humanScore = 0;
+        computerScore = 0;
+        divScore.innerText = `Computer ${computerScore} - ${humanScore} Human`;
+        return 1;
+    } else {
+        return 0;
+    }
+}
+
 // event listener > playround
 const buttons = document.querySelectorAll('button');
+const scoreToWin = 2;
 
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
         //alert("You have chosen: " + button.textContent);
         
+        //check score and rounds
+        if (humanScore == scoreToWin) {
+            alert("HUMAN WON !");
+            let i = 0
+            while (i == 0){i = askPlayAgain()};
+        } else if (computerScore == scoreToWin) {
+            alert("COMPUTER WON !");
+            let i = 0
+            while (i == 0){i = askPlayAgain()};
+            };
+
         //play
         let roundNum = playRound(button.className);
 
