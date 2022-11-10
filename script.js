@@ -23,9 +23,9 @@ function playerSelection() {
     return num
 }
 
-function playRound() {
+function playRound(playerNum) {
 
-    const playerNum = playerSelection();
+    //const playerNum = playerSelection();
     const computerNum = getComputerChoice()
 
     switch(computerNum) {           // error in switch
@@ -99,6 +99,19 @@ function playRound() {
 let computerScore = 0;
 let humanScore = 0;
 
+// event listener > playround
+const buttons = document.querySelectorAll('button');
+
+function logText(e) {
+    console.log(this.classList.value);
+    playRound();
+    // e.stopPropagation(); // stop bubbling!
+    // console.log(this);
+  }
+
+buttons.forEach(button => button.addEventListener('click', logText));
+
+/*
 while (humanScore < 3 && computerScore < 3) {
     //play
     let roundNum = playRound();
@@ -123,3 +136,4 @@ while (humanScore < 3 && computerScore < 3) {
     }
     
 }
+*/
