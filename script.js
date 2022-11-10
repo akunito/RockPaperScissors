@@ -24,7 +24,7 @@ function playerSelection() {
 }
 
 function playRound(playerNum) {
-    console.log("playerNum: " + playerNum);
+    //console.log("player plays: " + playerNum);
     //const playerNum = playerSelection();
     const computerNum = getComputerChoice();
 
@@ -99,13 +99,37 @@ function playRound(playerNum) {
 let computerScore = 0;
 let humanScore = 0;
 
+const container = document.querySelector('#container')
+const divScore = document.createElement('div');
+divScore.classList.add('divScore');
+divScore.textContent = `Computer ${computerScore} - ${humanScore} Human`;
+divScore.style.fontSize = 14;
+container.appendChild(divScore);
+
+function updateScore(roundNum) {
+  
+    if (roundNum == 1){
+        computerScore += 1
+    } else if (roundNum == 2) {
+        humanScore += 1
+    } 
+    console.log("-----------------------------------");
+    
+    divScore.innerText = `Computer ${computerScore} - ${humanScore} Human`;
+}
+
 // event listener > playround
 const buttons = document.querySelectorAll('button');
 
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
-        alert("You have chosen: " + button.textContent);
-        playRound(button.className);
+        //alert("You have chosen: " + button.textContent);
+        
+        //play
+        let roundNum = playRound(button.className);
+
+        //Update Score
+        updateScore(roundNum);
     });
 });
 
