@@ -31,66 +31,66 @@ function playRound(playerNum) {
     switch(computerNum) {           // error in switch
         case 0:
             if (playerNum == 0) {
-                console.log("Computer've choosen 'Rock' and Human 'Rock' ");
-                console.log("THIS IS A DRAW !");
+                alert("Computer've choosen 'Rock' and Human 'Rock' ");
+                alert("THIS IS A DRAW !");
                 return 0
 
             } else if (playerNum == 1) {
-                console.log("Computer've choosen 'Rock' and Human 'Paper' ");
-                console.log("HUMAN WINS !");
+                alert("Computer've choosen 'Rock' and Human 'Paper' ");
+                alert("HUMAN WINS !");
                 return 2
                 
             } else if (playerNum == 2) {
-                console.log("Computer've choosen 'Rock' and Human 'Scissors' ");
-                console.log("COMPUTER WINS !");
+                alert("Computer've choosen 'Rock' and Human 'Scissors' ");
+                alert("COMPUTER WINS !");
                 return 1
                 
             } else {
-                console.log("else in humanNum - input error?")
+                alert("else in humanNum - input error?")
                 return 0
             }
         case 1:
             if (playerNum == 0) {
-                console.log("Computer've choosen 'Paper' and Human 'Rock' ");
-                console.log("COMPUTER WINS !");
+                alert("Computer've choosen 'Paper' and Human 'Rock' ");
+                alert("COMPUTER WINS !");
                 return 1
 
             } else if (playerNum == 1) {
-                console.log("Computer've choosen 'Paper' and Human 'Paper' ");
-                console.log("THIS IS A DRAW !");
+                alert("Computer've choosen 'Paper' and Human 'Paper' ");
+                alert("THIS IS A DRAW !");
                 return 0
                 
             } else if (playerNum == 2) {
-                console.log("Computer've choosen 'Paper' and Human 'Scissors' ");
-                console.log("HUMAN WINS !");
+                alert("Computer've choosen 'Paper' and Human 'Scissors' ");
+                alert("HUMAN WINS !");
                 return 2
                 
             } else {
-                console.log("else in humanNum - input error?")
+                alert("else in humanNum - input error?")
                 return 0
             }
         case 2:
             if (playerNum == 0) {
-                console.log("Computer've choosen 'Scissors' and Human 'Rock' ");
-                console.log("HUMAN WINS !");
+                alert("Computer've choosen 'Scissors' and Human 'Rock' ");
+                alert("HUMAN WINS !");
                 return 2
 
             } else if (playerNum == 1) {
-                console.log("Computer've choosen 'Scissors' and Human 'Paper' ");
-                console.log("COMPUTER WINS !");
+                alert("Computer've choosen 'Scissors' and Human 'Paper' ");
+                alert("COMPUTER WINS !");
                 return 1
                 
             } else if (playerNum == 2) {
-                console.log("Computer've choosen 'Scissors' and Human 'Scissors' ");
-                console.log("THIS IS A DRAW !");
+                alert("Computer've choosen 'Scissors' and Human 'Scissors' ");
+                alert("THIS IS A DRAW !");
                 return 0
                 
             } else {
-                console.log("else in humanNum - input error?")
+                alert("else in humanNum - input error?")
                 return 0
             }
         default:
-            console.log("computerNum error?")
+            alert("computerNum error?")
             return 0
     }
     
