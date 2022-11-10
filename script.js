@@ -24,9 +24,9 @@ function playerSelection() {
 }
 
 function playRound(playerNum) {
-
+    console.log("playerNum: " + playerNum);
     //const playerNum = playerSelection();
-    const computerNum = getComputerChoice()
+    const computerNum = getComputerChoice();
 
     switch(computerNum) {           // error in switch
         case 0:
@@ -102,16 +102,18 @@ let humanScore = 0;
 // event listener > playround
 const buttons = document.querySelectorAll('button');
 
-function logText(e) {
-    console.log(this.classList.value);
-    playRound();
-    // e.stopPropagation(); // stop bubbling!
-    // console.log(this);
-  }
+buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+        alert("You have chosen: " + button.textContent);
+        playRound(button.className);
+    });
+});
 
-buttons.forEach(button => button.addEventListener('click', logText));
+//buttons.forEach(button => console.log(button.className));
 
-/*
+
+
+/* //all loop to play by console before UI
 while (humanScore < 3 && computerScore < 3) {
     //play
     let roundNum = playRound();
