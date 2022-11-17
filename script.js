@@ -103,7 +103,7 @@ const container = document.querySelector('#container')
 const divScore = document.createElement('div');
 divScore.classList.add('divScore');
 divScore.textContent = `Computer ${computerScore} - ${humanScore} Human`;
-divScore.style.fontSize = 14;
+divScore.style.fontSize = 24;
 container.appendChild(divScore);
 
 function updateScore(roundNum) {
