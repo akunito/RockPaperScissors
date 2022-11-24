@@ -138,7 +138,7 @@ function askPlayAgain() {
 
 // event listener > playround
 const buttons = document.querySelectorAll('button');
-const scoreToWin = 2;
+const scoreToWin = 5;
 
 buttons.forEach((button) => {
     button.addEventListener('click', () => {

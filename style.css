@@ -18,7 +18,8 @@ h1 {
   text-align: center;
   font-size: 10rem;
   line-height: 1;
-  margin-bottom: 0;
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
 }
 
 .score {
@@ -73,6 +74,15 @@ h1 {
 
 .divScore {
     text-align: center;
-    margin: 15px;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
+button {
+  padding: 1em;
+  background-color:darkmagenta;
+  border: 1px solid blue;
+  text-align: center;
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
+}
